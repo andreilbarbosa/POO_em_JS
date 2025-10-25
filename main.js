@@ -60,10 +60,23 @@ const pessoa = {
     conhecimentos: conhecimentos,
 }
 
-console.log(typeof nome);
-console.log(typeof idade);
-console.log(typeof conhecimentos);
-console.log(typeof pessoa);
+//
 
-console.log(conhecimentos instanceof Array);
-console.log(carroMaria2 instanceof Carro);
+
+Object.freeze(pessoa);
+
+pessoa.nome = 'Joao';
+
+console.log(pessoa['nome']);
+
+pessoa['sobrenome'] = 'Barbosa';
+
+if('sobrenome' in pessoa){
+    console.log(`Possui sobrenome. O mesmo é ${pessoa.sobrenome}, logo, seu nome é ${pessoa.nome} ${pessoa.sobrenome}.`);
+}else{
+    console.log('Nào possui sobrenome.');
+}
+
+console.log(Object.keys(pessoa));
+
+console.log(Object.values(pessoa));
