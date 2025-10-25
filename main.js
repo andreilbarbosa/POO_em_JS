@@ -49,3 +49,21 @@ console.log(carroJoao2);
 
 console.log(carroMaria2);
 
+
+const nome = "Andrei";
+const idade = 20;
+const conhecimentos = ['html', 'css', 'javascript'];
+
+const pessoa = {
+    nome: nome,
+    idade: idade,
+    conhecimentos: conhecimentos,
+}
+
+console.log(typeof nome);
+console.log(typeof idade);
+console.log(typeof conhecimentos);
+console.log(typeof pessoa);
+
+console.log(conhecimentos instanceof Array);
+console.log(carroMaria2 instanceof Carro);
